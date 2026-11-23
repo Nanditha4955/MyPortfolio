@@ -23,3 +23,5 @@
 - **Description**: Configured dynamic base routing and automated GitHub Pages workflow to support deployment on both GitHub Pages and Vercel.
 - **Files Created/Changed**: `vercel.json`, `README.md`
 - **Description**: Added explicit Vercel SPA build/routing configuration and updated documentation with live deployment links.
+- **Files Changed**: `README.md`
+- **Description**: Enhanced README with status badges, full project structure, and dual GitHub Pages / Vercel deployment workflows.

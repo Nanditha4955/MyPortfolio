@@ -1,14 +1,20 @@
 # Nanditha M — Developer Portfolio
 
+[![Deploy React Portfolio to GitHub Pages](https://github.com/Nanditha4955/MyPortfolio/actions/workflows/static.yml/badge.svg)](https://github.com/Nanditha4955/MyPortfolio/actions/workflows/static.yml)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Vercel Ready](https://img.shields.io/badge/Vercel-Ready-000000?style=flat&logo=vercel&logoColor=white)](https://vercel.com/)
+
 A sleek, responsive, and performance-focused personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**.
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Demos
 
-- **Live Website (GitHub Pages):** [https://nanditha4955.github.io/MyPortfolio/](https://nanditha4955.github.io/MyPortfolio/)
+- **Live Site (GitHub Pages):** [https://nanditha4955.github.io/MyPortfolio/](https://nanditha4955.github.io/MyPortfolio/)
+- **Featured Project (Expense Tracker):** [https://expense-tracker-one-beta-44.vercel.app](https://expense-tracker-one-beta-44.vercel.app)
 - **Deploy to Vercel:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nanditha4955/MyPortfolio)
-- **Featured Live Project:** [Expense Tracker](https://expense-tracker-one-beta-44.vercel.app)
 
 ---
 
@@ -35,6 +41,7 @@ A sleek, responsive, and performance-focused personal portfolio website built wi
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Design System:** Responsive CSS3, PostCSS, Autoprefixer
+- **Deployment & CI/CD:** GitHub Actions & Vercel
 
 ---
 
@@ -42,6 +49,9 @@ A sleek, responsive, and performance-focused personal portfolio website built wi
 
 ```text
 MyPortfolio/
+├── .github/
+│   └── workflows/
+│       └── static.yml         # GitHub Actions automated Pages deployment
 ├── public/
 │   ├── Nanditha_M_Resume.pdf  # Downloadable PDF resume
 │   └── profile.jpg            # Profile asset
@@ -53,7 +63,8 @@ MyPortfolio/
 ├── package.json               # Dependencies and scripts
 ├── postcss.config.js          # PostCSS configuration
 ├── tailwind.config.js         # Tailwind theme & color setup
-├── vite.config.js             # Vite configuration
+├── vercel.json                # Vercel SPA build & rewrite configuration
+├── vite.config.js             # Vite configuration with dynamic base path
 ├── CHANGELOG.md               # Project change history
 └── README.md                  # Project documentation
 ```
@@ -98,12 +109,20 @@ Make sure you have [Node.js](https://nodejs.org/) (version 18 or higher) install
 
 ## 🌐 Deployment
 
-The project is optimized for zero-configuration static deployment on **Vercel**:
+This project is configured to deploy automatically to **both GitHub Pages and Vercel** without any build conflicts.
 
-1. Push your repository to GitHub.
-2. Go to [Vercel Dashboard](https://vercel.com/new).
-3. Import the `MyPortfolio` repository.
-4. Click **Deploy**. Vite settings (`dist` output folder and build command) will be detected automatically.
+### 1. GitHub Pages (Automated via GitHub Actions)
+The repository includes a pre-configured GitHub Actions workflow (`.github/workflows/static.yml`):
+1. In your GitHub repository, navigate to **Settings** > **Pages**.
+2. Under **Build and deployment** > **Source**, select **GitHub Actions**.
+3. Every push to the `main` branch automatically builds and updates the live site at:  
+   👉 **[https://nanditha4955.github.io/MyPortfolio/](https://nanditha4955.github.io/MyPortfolio/)**
+
+### 2. Vercel (One-Click Deployment)
+The repository includes `vercel.json` with pre-configured single-page application (SPA) routing:
+1. Go to [Vercel Dashboard](https://vercel.com/new).
+2. Select and import the `MyPortfolio` repository.
+3. Click **Deploy**. Vite settings and output paths are detected automatically.
 
 ---
 
