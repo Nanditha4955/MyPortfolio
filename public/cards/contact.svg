@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 140" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 130" width="100%" height="100%">
   <defs>
     <style>
       .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
     </style>
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08081a"/>
-      <stop offset="100%" stop-color="#08182b"/>
+    <linearGradient id="cBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070719"/>
+      <stop offset="100%" stop-color="#07172b"/>
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
+    <filter id="cGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -16,32 +16,31 @@
     </filter>
   </defs>
 
-  <!-- Card Container -->
-  <rect x="2" y="2" width="576" height="136" rx="20" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.8"/>
-  <rect x="2" y="2" width="576" height="136" rx="20" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.35"/>
+  <!-- Card Body -->
+  <rect x="2" y="2" width="376" height="126" rx="18" fill="url(#cBg)" stroke="#1e293b" stroke-width="1.6"/>
+  <rect x="2" y="2" width="376" height="126" rx="18" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.35"/>
 
-  <!-- Left Icon Circle -->
-  <g transform="translate(24, 30)">
-    <rect width="80" height="80" rx="20" fill="#08182b" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow)"/>
-    <!-- Mail Envelope Icon -->
-    <rect x="24" y="28" width="32" height="24" rx="4" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
-    <path d="M 24 30 L 40 42 L 56 30" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="40" cy="42" r="2.5" fill="#67e8f9"/>
+  <!-- Left Icon Circle/Squircle -->
+  <g transform="translate(18, 25)">
+    <rect width="76" height="76" rx="18" fill="#08182b" stroke="#38bdf8" stroke-width="1.5" filter="url(#cGlow)"/>
+    <rect x="23" y="27" width="30" height="22" rx="4" fill="none" stroke="#38bdf8" stroke-width="2.3"/>
+    <path d="M 23 29 L 38 40 L 53 29" fill="none" stroke="#38bdf8" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="38" cy="40" r="2.2" fill="#67e8f9"/>
   </g>
 
-  <!-- Content -->
-  <g transform="translate(122, 45)">
-    <text class="sans" x="0" y="0" font-size="20" font-weight="700" fill="#ffffff" letter-spacing="0.3">
-      Contact &amp; Collaboration
+  <!-- Card Typography -->
+  <g transform="translate(106, 44)">
+    <text class="sans" x="0" y="0" font-size="17" font-weight="700" fill="#ffffff" letter-spacing="0.2">
+      Get In Touch
     </text>
-    <text class="sans" x="0" y="26" font-size="13" font-weight="400" fill="#94a3b8">
-      Open for full-stack developer roles &amp; software opportunities
+    <text class="sans" x="0" y="22" font-size="11.5" font-weight="400" fill="#94a3b8">
+      Open for full-stack developer roles
     </text>
-    <g transform="translate(0, 48)">
-      <rect width="130" height="24" rx="12" fill="#0284c7" opacity="0.25"/>
-      <rect width="130" height="24" rx="12" fill="none" stroke="#38bdf8" stroke-width="1"/>
-      <text class="sans" x="14" y="16" font-size="11" font-weight="600" fill="#38bdf8">
-        GET IN TOUCH ↗
+    <g transform="translate(0, 36)">
+      <rect width="118" height="22" rx="11" fill="#0369a1" opacity="0.25"/>
+      <rect width="118" height="22" rx="11" fill="none" stroke="#38bdf8" stroke-width="1"/>
+      <text class="sans" x="12" y="15" font-size="10" font-weight="600" fill="#38bdf8">
+        SEND EMAIL ↗
       </text>
     </g>
   </g>

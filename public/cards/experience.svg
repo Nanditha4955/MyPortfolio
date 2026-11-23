@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 140" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 130" width="100%" height="100%">
   <defs>
     <style>
       .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
     </style>
-    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#08081a"/>
-      <stop offset="100%" stop-color="#1c1306"/>
+    <linearGradient id="eBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070719"/>
+      <stop offset="100%" stop-color="#1c1206"/>
     </linearGradient>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
+    <filter id="eGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -16,32 +16,31 @@
     </filter>
   </defs>
 
-  <!-- Card Container -->
-  <rect x="2" y="2" width="576" height="136" rx="20" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.8"/>
-  <rect x="2" y="2" width="576" height="136" rx="20" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.35"/>
+  <!-- Card Body -->
+  <rect x="2" y="2" width="376" height="126" rx="18" fill="url(#eBg)" stroke="#1e293b" stroke-width="1.6"/>
+  <rect x="2" y="2" width="376" height="126" rx="18" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.35"/>
 
-  <!-- Left Icon Circle -->
-  <g transform="translate(24, 30)">
-    <rect width="80" height="80" rx="20" fill="#1f1404" stroke="#f59e0b" stroke-width="1.5" filter="url(#glow)"/>
-    <!-- Graduation Cap / Award Icon -->
-    <path d="M 40 24 L 60 33 L 40 42 L 20 33 Z" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linejoin="round"/>
-    <path d="M 27 36 L 27 50 C 27 54, 40 58, 40 58 C 40 58, 53 54, 53 50 L 53 36" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
-    <line x1="57" y1="34" x2="57" y2="48" stroke="#fbbf24" stroke-width="2"/>
-    <circle cx="57" cy="49" r="2" fill="#fbbf24"/>
+  <!-- Left Icon Circle/Squircle -->
+  <g transform="translate(18, 25)">
+    <rect width="76" height="76" rx="18" fill="#1f1304" stroke="#f59e0b" stroke-width="1.5" filter="url(#eGlow)"/>
+    <path d="M 38 22 L 57 31 L 38 40 L 19 31 Z" fill="none" stroke="#f59e0b" stroke-width="2.3" stroke-linejoin="round"/>
+    <path d="M 26 34 L 26 48 C 26 52, 38 56, 38 56 C 38 56, 50 52, 50 48 L 50 34" fill="none" stroke="#f59e0b" stroke-width="1.8" stroke-linecap="round"/>
+    <line x1="54" y1="32" x2="54" y2="45" stroke="#fbbf24" stroke-width="1.8"/>
+    <circle cx="54" cy="46" r="1.8" fill="#fbbf24"/>
   </g>
 
-  <!-- Content -->
-  <g transform="translate(122, 45)">
-    <text class="sans" x="0" y="0" font-size="20" font-weight="700" fill="#ffffff" letter-spacing="0.3">
-      Experience &amp; Education
+  <!-- Card Typography -->
+  <g transform="translate(106, 44)">
+    <text class="sans" x="0" y="0" font-size="17" font-weight="700" fill="#ffffff" letter-spacing="0.2">
+      Experience
     </text>
-    <text class="sans" x="0" y="26" font-size="13" font-weight="400" fill="#94a3b8">
-      Developer Intern @ INDBIN CRM Fintech • B.Tech CSE (CGPA 7.53)
+    <text class="sans" x="0" y="22" font-size="11.5" font-weight="400" fill="#94a3b8">
+      INDBIN CRM • B.Tech CSE 2026
     </text>
-    <g transform="translate(0, 48)">
-      <rect width="130" height="24" rx="12" fill="#78350f" opacity="0.25"/>
-      <rect width="130" height="24" rx="12" fill="none" stroke="#f59e0b" stroke-width="1"/>
-      <text class="sans" x="14" y="16" font-size="11" font-weight="600" fill="#fbbf24">
+    <g transform="translate(0, 36)">
+      <rect width="118" height="22" rx="11" fill="#78350f" opacity="0.25"/>
+      <rect width="118" height="22" rx="11" fill="none" stroke="#f59e0b" stroke-width="1"/>
+      <text class="sans" x="12" y="15" font-size="10" font-weight="600" fill="#fbbf24">
         VIEW JOURNEY ↗
       </text>
     </g>
