@@ -17,3 +17,5 @@
 - **Description**: Removed profile portrait from hero section and restored full single-column layout.
 - **Files Created**: `.gitignore`
 - **Description**: Configured repository ignore rules and initialized Git on main branch for GitHub/Vercel deployment.
+- **Files Created**: `README.md`
+- **Description**: Created comprehensive documentation covering overview, features, tech stack, project structure, setup, and deployment.
