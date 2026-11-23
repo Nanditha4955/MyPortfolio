@@ -4,7 +4,6 @@
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Vercel Ready](https://img.shields.io/badge/Vercel-Ready-000000?style=flat&logo=vercel&logoColor=white)](https://vercel.com/)
 
 A sleek, responsive, and performance-focused personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**.
 
@@ -14,7 +13,6 @@ A sleek, responsive, and performance-focused personal portfolio website built wi
 
 - **Live Site (GitHub Pages):** [https://nanditha4955.github.io/MyPortfolio/](https://nanditha4955.github.io/MyPortfolio/)
 - **Featured Project (Expense Tracker):** [https://expense-tracker-one-beta-44.vercel.app](https://expense-tracker-one-beta-44.vercel.app)
-- **Deploy to Vercel:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nanditha4955/MyPortfolio)
 
 ---
 
@@ -27,7 +25,7 @@ A sleek, responsive, and performance-focused personal portfolio website built wi
   - **About Me:** Academic background from Mangalam College of Engineering (B.Tech in CS with Minor in Robotics).
   - **Experience & Internships:** Hands-on industry background at INDBIN CRM Fintech Services, Teklearn (UI/UX with AI), and NEST Cyber Campus (Python).
   - **Technical Skills:** Categorized competencies across Frontend, Backend & APIs, Databases, Programming Languages, and Dev Tools.
-  - **Projects Showcase:** Filterable tabs dividing **Personal Projects** (with GitHub repo & live Vercel links) and **Academic Projects**.
+  - **Projects Showcase:** Filterable tabs dividing **Personal Projects** (with GitHub repo & live demo) and **Academic Projects**.
   - **Certifications:** Verified credentials from Infosys Springboard (MERN), AWS (Cloud Practitioner & Prompt Engineering), and NPTEL.
   - **Download Resume:** Direct offline PDF download trigger (`Nanditha_M_Resume.pdf`) and in-browser preview option.
   - **Direct Contact:** Client-side email composition form using secure native `mailto:`, avoiding paid third-party dependencies.
@@ -41,7 +39,7 @@ A sleek, responsive, and performance-focused personal portfolio website built wi
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Design System:** Responsive CSS3, PostCSS, Autoprefixer
-- **Deployment & CI/CD:** GitHub Actions & Vercel
+- **Deployment & CI/CD:** GitHub Actions & GitHub Pages
 
 ---
 
@@ -63,8 +61,7 @@ MyPortfolio/
 ├── package.json               # Dependencies and scripts
 ├── postcss.config.js          # PostCSS configuration
 ├── tailwind.config.js         # Tailwind theme & color setup
-├── vercel.json                # Vercel SPA build & rewrite configuration
-├── vite.config.js             # Vite configuration with dynamic base path
+├── vite.config.js             # Vite configuration for GitHub Pages
 ├── CHANGELOG.md               # Project change history
 └── README.md                  # Project documentation
 ```
@@ -107,22 +104,14 @@ Make sure you have [Node.js](https://nodejs.org/) (version 18 or higher) install
 
 ---
 
-## 🌐 Deployment
+## 🌐 Deployment (GitHub Pages)
 
-This project is configured to deploy automatically to **both GitHub Pages and Vercel** without any build conflicts.
+The project deploys automatically to **GitHub Pages** using GitHub Actions:
 
-### 1. GitHub Pages (Automated via GitHub Actions)
-The repository includes a pre-configured GitHub Actions workflow (`.github/workflows/static.yml`):
 1. In your GitHub repository, navigate to **Settings** > **Pages**.
 2. Under **Build and deployment** > **Source**, select **GitHub Actions**.
-3. Every push to the `main` branch automatically builds and updates the live site at:  
+3. Every push to the `main` branch automatically triggers `.github/workflows/static.yml` to build and deploy the live site at:  
    👉 **[https://nanditha4955.github.io/MyPortfolio/](https://nanditha4955.github.io/MyPortfolio/)**
-
-### 2. Vercel (One-Click Deployment)
-The repository includes `vercel.json` with pre-configured single-page application (SPA) routing:
-1. Go to [Vercel Dashboard](https://vercel.com/new).
-2. Select and import the `MyPortfolio` repository.
-3. Click **Deploy**. Vite settings and output paths are detected automatically.
 
 ---
 

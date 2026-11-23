@@ -25,3 +25,5 @@
 - **Description**: Added explicit Vercel SPA build/routing configuration and updated documentation with live deployment links.
 - **Files Changed**: `README.md`
 - **Description**: Enhanced README with status badges, full project structure, and dual GitHub Pages / Vercel deployment workflows.
+- **Files Deleted/Changed**: `vercel.json` (deleted), `vite.config.js`, `README.md`
+- **Description**: Removed all Vercel configurations and focused build/deployment exclusively on GitHub Pages.
