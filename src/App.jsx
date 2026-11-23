@@ -23,11 +23,13 @@ import {
   Wrench,
   CheckCircle2,
   FolderGit2,
-  BookOpen
+  BookOpen,
+  Eye
 } from 'lucide-react';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [resumeModalOpen, setResumeModalOpen] = useState(false);
   const [projectTab, setProjectTab] = useState('all'); // 'all' | 'personal' | 'academic'
   const [contactForm, setContactForm] = useState({
     name: '',
@@ -291,12 +293,21 @@ export default function App() {
               Explore Projects
               <ChevronRight className="w-4 h-4" />
             </a>
-            <a
-              href="#resume"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-zinc-800 hover:border-zinc-700 bg-zinc-950/80 text-zinc-200 text-sm font-medium transition"
+            <button
+              type="button"
+              onClick={() => setResumeModalOpen(true)}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-zinc-800 hover:border-zinc-700 bg-zinc-950/80 text-zinc-200 text-sm font-medium transition cursor-pointer hover:bg-zinc-900"
             >
-              <Download className="w-4 h-4 text-emerald-400" />
-              Download Resume
+              <Eye className="w-4 h-4 text-emerald-400" />
+              Preview Resume
+            </button>
+            <a
+              href={`${import.meta.env.BASE_URL}Nanditha_M_Resume.pdf`}
+              download="Nanditha_M_Resume.pdf"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-zinc-900 hover:border-zinc-800 bg-black text-zinc-300 text-sm font-medium transition hover:text-white"
+            >
+              <Download className="w-4 h-4 text-zinc-400" />
+              Download PDF
             </a>
             <div className="flex items-center gap-2 sm:ml-2">
               <a
@@ -698,22 +709,30 @@ export default function App() {
           </div>
 
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3 w-full lg:w-auto shrink-0">
+            <button
+              type="button"
+              onClick={() => setResumeModalOpen(true)}
+              className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-black font-semibold text-sm transition shadow-[0_0_20px_rgba(52,211,153,0.3)] cursor-pointer"
+            >
+              <Eye className="w-4 h-4" />
+              Preview Resume Online
+            </button>
             <a
               href={`${import.meta.env.BASE_URL}Nanditha_M_Resume.pdf`}
               download="Nanditha_M_Resume.pdf"
-              className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-black font-semibold text-sm transition shadow-[0_0_20px_rgba(52,211,153,0.3)]"
+              className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-zinc-100 border border-zinc-800 font-semibold text-sm transition shadow-md"
             >
-              <Download className="w-4 h-4" />
+              <Download className="w-4 h-4 text-emerald-400" />
               Download Resume (PDF)
             </a>
             <a
               href={`${import.meta.env.BASE_URL}Nanditha_M_Resume.pdf`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-black hover:bg-zinc-900 text-zinc-200 border border-zinc-800 text-sm font-medium transition"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full text-zinc-400 hover:text-white text-xs font-medium transition"
             >
-              <ExternalLink className="w-4 h-4 text-zinc-400" />
-              View in Browser
+              <ExternalLink className="w-3.5 h-3.5" />
+              Open PDF in New Tab
             </a>
           </div>
         </div>
@@ -915,6 +934,57 @@ export default function App() {
           </a>
         </div>
       </footer>
+
+      {/* Interactive Resume Preview Modal */}
+      {resumeModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md">
+          <div className="relative w-full max-w-4xl h-[90vh] bg-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden flex flex-col shadow-2xl">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-zinc-850 bg-black">
+              <div className="flex items-center gap-2">
+                <FileText className="w-4 h-4 text-emerald-400" />
+                <span className="text-sm font-semibold text-white">Nanditha M — Official Resume</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <a
+                  href={`${import.meta.env.BASE_URL}Nanditha_M_Resume.pdf`}
+                  download="Nanditha_M_Resume.pdf"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-400 hover:bg-emerald-300 text-black text-xs font-semibold transition"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Download
+                </a>
+                <a
+                  href={`${import.meta.env.BASE_URL}Nanditha_M_Resume.pdf`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white transition"
+                  title="Open in new window"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+                <button
+                  type="button"
+                  onClick={() => setResumeModalOpen(false)}
+                  className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 hover:text-white transition ml-1 cursor-pointer"
+                  aria-label="Close Preview"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Modal Body: Embedded PDF iframe */}
+            <div className="flex-1 bg-zinc-900 relative">
+              <iframe
+                src={`${import.meta.env.BASE_URL}Nanditha_M_Resume.pdf`}
+                className="w-full h-full border-none"
+                title="Resume Preview"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

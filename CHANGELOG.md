@@ -25,3 +25,5 @@
 - **Description**: Removed all external demo links and references, standardizing exclusively on GitHub Pages.
 - **Files Created**: `public/banner.svg`
 - **Description**: Created glowing dark/cyan cosmic developer banner without photo for GitHub profile README.
+- **Files Created/Changed**: `public/Nanditha_M_Resume.pdf`, `src/App.jsx`
+- **Description**: Connected actual uploaded resume PDF and built interactive in-app resume preview modal with direct download.
