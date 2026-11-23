@@ -9,10 +9,10 @@ A sleek, responsive, and performance-focused personal portfolio website built wi
 
 ---
 
-## 🚀 Live Demos
+## 🚀 Live Demo
 
 - **Live Site (GitHub Pages):** [https://nanditha4955.github.io/MyPortfolio/](https://nanditha4955.github.io/MyPortfolio/)
-- **Featured Project (Expense Tracker):** [https://expense-tracker-one-beta-44.vercel.app](https://expense-tracker-one-beta-44.vercel.app)
+- **Featured Project (Expense Tracker):** [GitHub Repository](https://github.com/Nanditha4955/expense-tracker)
 
 ---
 

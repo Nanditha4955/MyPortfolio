@@ -122,7 +122,7 @@ export default function App() {
       technologies: ['React', 'JavaScript', 'Vite', 'LocalStorage', 'CSS3'],
       description: 'A snappy personal finance application designed for real-time income and expense tracking. Computes dynamic balances, categorizes spending (Food, Travel, Shopping, Salary, Other), supports instant transaction filters, and securely persists state via localStorage.',
       github: 'https://github.com/Nanditha4955/expense-tracker',
-      demo: 'https://expense-tracker-one-beta-44.vercel.app',
+      demo: null,
       hasRepo: true
     }
   ];
@@ -526,10 +526,12 @@ export default function App() {
                         <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-semibold">
                           {proj.type}
                         </span>
-                        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                          Live App
-                        </span>
+                        {proj.demo && (
+                          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            Live App
+                          </span>
+                        )}
                       </div>
                       <h4 className="text-xl font-bold text-white leading-tight">{proj.title}</h4>
                     </div>
@@ -551,18 +553,20 @@ export default function App() {
                             href={proj.github}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-300 hover:text-white transition px-3 py-1.5 rounded-md bg-black border border-zinc-800"
+                            className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-300 hover:text-white transition px-3.5 py-1.5 rounded-md bg-black border border-zinc-800"
                           >
                             <Github className="w-3.5 h-3.5 text-zinc-400" /> GitHub Repo
                           </a>
-                          <a
-                            href={proj.demo}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-black bg-white hover:bg-zinc-200 transition px-3.5 py-1.5 rounded-md ml-auto"
-                          >
-                            <ExternalLink className="w-3.5 h-3.5" /> Live Demo
-                          </a>
+                          {proj.demo && (
+                            <a
+                              href={proj.demo}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-black bg-white hover:bg-zinc-200 transition px-3.5 py-1.5 rounded-md ml-auto"
+                            >
+                              <ExternalLink className="w-3.5 h-3.5" /> Live Demo
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
