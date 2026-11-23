@@ -695,7 +695,7 @@ export default function App() {
 
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3 w-full lg:w-auto shrink-0">
             <a
-              href="/Nanditha_M_Resume.pdf"
+              href={`${import.meta.env.BASE_URL}Nanditha_M_Resume.pdf`}
               download="Nanditha_M_Resume.pdf"
               className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full bg-emerald-400 hover:bg-emerald-300 text-black font-semibold text-sm transition shadow-[0_0_20px_rgba(52,211,153,0.3)]"
             >
@@ -703,7 +703,7 @@ export default function App() {
               Download Resume (PDF)
             </a>
             <a
-              href="/Nanditha_M_Resume.pdf"
+              href={`${import.meta.env.BASE_URL}Nanditha_M_Resume.pdf`}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-black hover:bg-zinc-900 text-zinc-200 border border-zinc-800 text-sm font-medium transition"

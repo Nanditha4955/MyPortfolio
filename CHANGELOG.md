@@ -19,3 +19,5 @@
 - **Description**: Configured repository ignore rules and initialized Git on main branch for GitHub/Vercel deployment.
 - **Files Created**: `README.md`
 - **Description**: Created comprehensive documentation covering overview, features, tech stack, project structure, setup, and deployment.
+- **Files Created/Changed**: `vite.config.js`, `src/App.jsx`, `.github/workflows/static.yml`
+- **Description**: Configured dynamic base routing and automated GitHub Pages workflow to support deployment on both GitHub Pages and Vercel.
