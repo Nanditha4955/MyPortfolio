@@ -27,3 +27,5 @@
 - **Description**: Created glowing dark/cyan cosmic developer banner without photo for GitHub profile README.
 - **Files Created/Changed**: `public/Nanditha_M_Resume.pdf`, `src/App.jsx`
 - **Description**: Connected actual uploaded resume PDF and built interactive in-app resume preview modal with direct download.
+- **Files Created/Changed**: `public/banner.svg`, `public/cards/portfolio.svg`, `public/cards/resume.svg`, `public/cards/projects.svg`, `public/cards/skills.svg`, `public/cards/experience.svg`, `public/cards/contact.svg`, `src/App.jsx`
+- **Description**: Enhanced cosmic banner and 6 dark SVG cards matching user reference image, and embedded live document viewer in Resume section directly displaying the uploaded PDF.

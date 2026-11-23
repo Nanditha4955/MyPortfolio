@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 140" width="100%" height="100%">
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08081a"/>
+      <stop offset="100%" stop-color="#140e2b"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Card Container -->
+  <rect x="2" y="2" width="576" height="136" rx="20" fill="url(#cardBg)" stroke="#1e293b" stroke-width="1.8"/>
+  <rect x="2" y="2" width="576" height="136" rx="20" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.35"/>
+
+  <!-- Left Icon Circle -->
+  <g transform="translate(24, 30)">
+    <rect width="80" height="80" rx="20" fill="#120f30" stroke="#818cf8" stroke-width="1.5" filter="url(#glow)"/>
+    <!-- Folder / Code Icon -->
+    <path d="M 24 30 L 36 30 L 42 36 L 56 36 L 56 56 L 24 56 Z" fill="none" stroke="#818cf8" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M 33 43 L 38 48 L 33 53" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="42" y1="53" x2="48" y2="53" stroke="#818cf8" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Content -->
+  <g transform="translate(122, 45)">
+    <text class="sans" x="0" y="0" font-size="20" font-weight="700" fill="#ffffff" letter-spacing="0.3">
+      Featured: Expense Tracker
+    </text>
+    <text class="sans" x="0" y="26" font-size="13" font-weight="400" fill="#94a3b8">
+      Full-stack personal finance application with live analytics &amp; UI
+    </text>
+    <g transform="translate(0, 48)">
+      <rect width="135" height="24" rx="12" fill="#4338ca" opacity="0.25"/>
+      <rect width="135" height="24" rx="12" fill="none" stroke="#818cf8" stroke-width="1"/>
+      <text class="sans" x="14" y="16" font-size="11" font-weight="600" fill="#a5b4fc">
+        GITHUB REPO ↗
+      </text>
+    </g>
+  </g>
+</svg>

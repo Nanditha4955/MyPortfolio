@@ -1,50 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
   <defs>
-    <!-- Background Gradients -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#05050f"/>
-      <stop offset="40%" stop-color="#0a081f"/>
-      <stop offset="75%" stop-color="#140b2e"/>
-      <stop offset="100%" stop-color="#05050f"/>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Great+Vibes&amp;family=Inter:wght@400;600;700&amp;display=swap');
+      .cursive-title {
+        font-family: 'Great Vibes', 'Caveat', 'Brush Script MT', 'Dancing Script', 'Segoe Script', cursive, sans-serif;
+      }
+      .sans-text {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+    </style>
+
+    <!-- Deep Space Gradient Background -->
+    <linearGradient id="spaceBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030014"/>
+      <stop offset="35%" stop-color="#080720"/>
+      <stop offset="70%" stop-color="#14092b"/>
+      <stop offset="100%" stop-color="#030014"/>
     </linearGradient>
 
-    <!-- Glowing Waves Gradients -->
-    <linearGradient id="neonWave1" x1="0%" y1="50%" x2="100%" y2="50%">
-      <stop offset="0%" stop-color="#7928ca" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#2563eb" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.8"/>
+    <!-- Aurora Ribbon Gradients -->
+    <linearGradient id="auroraGlow1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928ca" stop-opacity="0.9"/>
+      <stop offset="45%" stop-color="#3b82f6" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#00f2fe" stop-opacity="0.95"/>
     </linearGradient>
 
-    <linearGradient id="neonWave2" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.7"/>
-      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.5"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.1"/>
+    <linearGradient id="auroraGlow2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.3"/>
     </linearGradient>
 
     <!-- Text Gradients -->
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="titleGlow" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="50%" stop-color="#e2e8f0"/>
-      <stop offset="100%" stop-color="#93c5fd"/>
+      <stop offset="50%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#c7d2fe"/>
     </linearGradient>
 
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8"/>
       <stop offset="50%" stop-color="#818cf8"/>
       <stop offset="100%" stop-color="#c084fc"/>
     </linearGradient>
 
-    <!-- Glow Filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="15" result="blur"/>
+    <!-- Glow Filters -->
+    <filter id="megaGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="subtleGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -52,111 +62,110 @@
     </filter>
   </defs>
 
-  <!-- Dark Cosmic Canvas -->
-  <rect width="1200" height="360" rx="20" fill="url(#bgGrad)"/>
+  <!-- Deep Cosmic Canvas -->
+  <rect width="1200" height="380" rx="24" fill="url(#spaceBg)"/>
 
-  <!-- Subtle Ambient Glow Orbs -->
-  <circle cx="200" cy="100" r="140" fill="#7928ca" opacity="0.25" filter="url(#glow)"/>
-  <circle cx="950" cy="180" r="160" fill="#00f2fe" opacity="0.2" filter="url(#glow)"/>
-  <circle cx="600" cy="300" r="180" fill="#3b82f6" opacity="0.18" filter="url(#glow)"/>
+  <!-- Ambient Nebulae -->
+  <circle cx="180" cy="120" r="160" fill="#7928ca" opacity="0.3" filter="url(#megaGlow)"/>
+  <circle cx="980" cy="190" r="180" fill="#00f2fe" opacity="0.22" filter="url(#megaGlow)"/>
+  <circle cx="580" cy="320" r="190" fill="#3b82f6" opacity="0.2" filter="url(#megaGlow)"/>
 
-  <!-- Flowing Neon Ribbons / Wave Lines -->
-  <path d="M -50 280 C 200 320, 350 200, 600 240 C 850 280, 1000 160, 1250 200" 
-        fill="none" stroke="url(#neonWave1)" stroke-width="4" filter="url(#subtleGlow)"/>
-  <path d="M -50 310 C 250 220, 400 340, 700 270 C 950 210, 1050 300, 1250 240" 
-        fill="none" stroke="url(#neonWave2)" stroke-width="2.5" opacity="0.85"/>
-  <path d="M 0 120 C 300 40, 500 180, 800 100 C 1000 40, 1150 140, 1250 80" 
-        fill="none" stroke="url(#neonWave1)" stroke-width="1.5" opacity="0.4"/>
+  <!-- Curved Aurora Ribbons (Top & Bottom Wave Flow) -->
+  <path d="M -60 300 C 180 340, 360 210, 620 250 C 880 290, 1020 170, 1260 210" 
+        fill="none" stroke="url(#auroraGlow1)" stroke-width="5" filter="url(#softGlow)"/>
+  <path d="M -60 330 C 220 230, 420 360, 720 280 C 970 220, 1080 320, 1260 250" 
+        fill="none" stroke="url(#auroraGlow2)" stroke-width="3" opacity="0.85"/>
+  <path d="M -40 100 C 280 20, 480 160, 780 80 C 980 20, 1140 120, 1260 60" 
+        fill="none" stroke="url(#auroraGlow1)" stroke-width="2" opacity="0.45"/>
 
-  <!-- Decorative Floating Code Spheres / Tech Particles -->
-  <circle cx="120" cy="80" r="4" fill="#38bdf8" opacity="0.8"/>
-  <circle cx="540" cy="60" r="3" fill="#a855f7" opacity="0.7"/>
-  <circle cx="480" cy="300" r="4" fill="#00f2fe" opacity="0.6"/>
-  <circle cx="1080" cy="90" r="5" fill="#818cf8" opacity="0.75"/>
-  <circle cx="780" cy="310" r="3" fill="#38bdf8" opacity="0.5"/>
+  <!-- Starlight Tech Particles -->
+  <circle cx="90" cy="70" r="3.5" fill="#38bdf8" opacity="0.85"/>
+  <circle cx="510" cy="50" r="2.5" fill="#a855f7" opacity="0.75"/>
+  <circle cx="450" cy="320" r="3.5" fill="#00f2fe" opacity="0.65"/>
+  <circle cx="1110" cy="80" r="4" fill="#818cf8" opacity="0.8"/>
+  <circle cx="760" cy="330" r="2.5" fill="#38bdf8" opacity="0.6"/>
+  <circle cx="280" cy="350" r="2" fill="#c084fc" opacity="0.5"/>
 
-  <!-- Left/Center Branding -->
-  <g transform="translate(100, 85)">
-    <!-- Code Bracket Icon with Glow -->
-    <g transform="translate(0, 0)">
-      <rect x="0" y="0" width="56" height="56" rx="14" fill="#0f0e26" stroke="#818cf8" stroke-width="1.5" filter="url(#subtleGlow)"/>
-      <path d="M 22 20 L 14 28 L 22 36" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M 34 20 L 42 28 L 34 36" fill="none" stroke="#38bdf8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <line x1="30" y1="18" x2="26" y2="38" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Branding Group: Left / Center -->
+  <g transform="translate(90, 95)">
+    <!-- Neon Code Symbol Box </> -->
+    <g transform="translate(0, 5)">
+      <rect x="0" y="0" width="62" height="62" rx="16" fill="#0b0a24" stroke="url(#cyanPurple)" stroke-width="2" filter="url(#softGlow)"/>
+      <path d="M 23 21 L 14 31 L 23 41" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 39 21 L 48 31 L 39 41" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="34" y1="19" x2="28" y2="43" stroke="#c084fc" stroke-width="3" stroke-linecap="round"/>
     </g>
 
-    <!-- Name Heading -->
-    <text x="75" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Dancing Script', cursive, sans-serif" 
-          font-size="52" font-weight="800" fill="url(#textGrad)" letter-spacing="1.5">
+    <!-- Name Heading (Cursive Script with Glow) -->
+    <text x="85" y="52" class="cursive-title" font-size="64" font-weight="700" fill="url(#titleGlow)" filter="url(#softGlow)" letter-spacing="1">
       Nanditha M
     </text>
 
-    <!-- Subtitle Title -->
-    <text x="75" y="92" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-          font-size="24" font-weight="600" fill="url(#accentGrad)" letter-spacing="0.5">
+    <!-- Title / Subtitle -->
+    <text x="85" y="100" class="sans-text" font-size="25" font-weight="600" fill="url(#cyanPurple)" letter-spacing="0.5">
       Aspiring Full Stack Developer
     </text>
 
-    <!-- Pillars / Tagline -->
-    <g transform="translate(75, 135)">
-      <text x="0" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-            font-size="16" font-weight="500" fill="#94a3b8" letter-spacing="3">
+    <!-- Three Tagline Pillars: BUILD • LEARN • INNOVATE -->
+    <g transform="translate(85, 142)">
+      <text x="0" y="0" class="sans-text" font-size="15" font-weight="600" fill="#cbd5e1" letter-spacing="3.5">
         BUILD
       </text>
-      <circle cx="75" cy="-5" r="3" fill="#38bdf8"/>
-      <text x="95" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-            font-size="16" font-weight="500" fill="#94a3b8" letter-spacing="3">
+      <circle cx="78" cy="-5" r="3.5" fill="#38bdf8" filter="url(#softGlow)"/>
+      <text x="98" y="0" class="sans-text" font-size="15" font-weight="600" fill="#cbd5e1" letter-spacing="3.5">
         LEARN
       </text>
-      <circle cx="178" cy="-5" r="3" fill="#a855f7"/>
-      <text x="198" y="0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
-            font-size="16" font-weight="500" fill="#94a3b8" letter-spacing="3">
+      <circle cx="186" cy="-5" r="3.5" fill="#a855f7" filter="url(#softGlow)"/>
+      <text x="206" y="0" class="sans-text" font-size="15" font-weight="600" fill="#cbd5e1" letter-spacing="3.5">
         INNOVATE
       </text>
     </g>
   </g>
 
-  <!-- Right Side: Quote & Glowing Laptop Graphic -->
-  <g transform="translate(850, 75)">
-    <!-- Quote Banner -->
-    <g transform="translate(-40, 20)">
-      <text x="0" y="0" font-family="'Georgia', serif" font-style="italic" font-size="22" fill="#c084fc" opacity="0.95">
+  <!-- Right Section: Quote & 3D Glowing Code Laptop -->
+  <g transform="translate(830, 80)">
+    <!-- Handwritten Quote on Upper Right -->
+    <g transform="translate(-15, 25)">
+      <text x="0" y="0" class="cursive-title" font-size="28" fill="#c084fc" filter="url(#softGlow)">
         “Turning Ideas
       </text>
-      <text x="35" y="32" font-family="'Georgia', serif" font-style="italic" font-size="22" fill="#38bdf8" opacity="0.95">
+      <text x="45" y="36" class="cursive-title" font-size="28" fill="#38bdf8" filter="url(#softGlow)">
         into Impact”
       </text>
     </g>
 
-    <!-- Minimalist Isometric Laptop Graphic (Matching user image) -->
-    <g transform="translate(20, 60)">
-      <!-- Laptop Base Shadow -->
-      <ellipse cx="120" cy="165" rx="130" ry="22" fill="#00f2fe" opacity="0.18" filter="url(#glow)"/>
+    <!-- Futuristic 3D Perspective Glowing Laptop -->
+    <g transform="translate(30, 75)">
+      <!-- Ground Ambient Cyan Base Glow -->
+      <ellipse cx="130" cy="165" rx="145" ry="24" fill="#00f2fe" opacity="0.22" filter="url(#megaGlow)"/>
 
-      <!-- Laptop Screen Back / Glow -->
-      <polygon points="40,20 180,0 230,120 90,140" fill="#0c0d24" stroke="#818cf8" stroke-width="2"/>
+      <!-- Laptop Screen Chassis -->
+      <polygon points="40,15 185,-5 240,120 95,140" fill="#0b0b24" stroke="#818cf8" stroke-width="2"/>
       
-      <!-- Laptop Screen Display (Glowing Blue Screen) -->
-      <polygon points="46,24 174,6 222,116 94,134" fill="#070a1e"/>
+      <!-- Screen Display (Deep Electric Indigo) -->
+      <polygon points="47,19 179,-1 231,116 99,134" fill="#06081e"/>
       
-      <!-- Code Lines on Screen -->
-      <line x1="65" y1="35" x2="110" y2="30" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
-      <line x1="72" y1="48" x2="140" y2="40" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round"/>
-      <line x1="78" y1="61" x2="125" y2="55" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
-      <line x1="85" y1="74" x2="160" y2="65" stroke="#f472b6" stroke-width="2.5" stroke-linecap="round"/>
-      <line x1="92" y1="87" x2="135" y2="82" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
-      <line x1="100" y1="100" x2="175" y2="92" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round"/>
-      <line x1="108" y1="113" x2="150" y2="108" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
+      <!-- Syntax Highlighted Code Lines -->
+      <line x1="68" y1="32" x2="115" y2="26" stroke="#38bdf8" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="75" y1="46" x2="148" y2="37" stroke="#c084fc" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="82" y1="60" x2="132" y2="53" stroke="#34d399" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="89" y1="74" x2="168" y2="64" stroke="#f472b6" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="96" y1="88" x2="140" y2="82" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+      <line x1="104" y1="102" x2="184" y2="93" stroke="#a78bfa" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="112" y1="116" x2="158" y2="110" stroke="#34d399" stroke-width="2" stroke-linecap="round"/>
 
-      <!-- Laptop Keyboard Deck Base -->
-      <polygon points="90,140 230,120 270,150 120,172" fill="#1e1b4b" stroke="#38bdf8" stroke-width="1.5"/>
-      <polygon points="120,172 270,150 270,156 120,178" fill="#0f0e26"/>
+      <!-- Laptop Base Deck & Keyboard Deck -->
+      <polygon points="95,140 240,120 282,152 126,174" fill="#18163f" stroke="#38bdf8" stroke-width="1.5"/>
+      <polygon points="126,174 282,152 282,158 126,180" fill="#0b0a24"/>
 
-      <!-- Floating Tech Node -->
-      <g transform="translate(10, 80)">
-        <rect x="0" y="0" width="28" height="28" rx="8" fill="#0f0e26" stroke="#38bdf8" stroke-width="1.2" opacity="0.8"/>
-        <circle cx="14" cy="14" r="5" fill="none" stroke="#c084fc" stroke-width="1.5"/>
-        <circle cx="14" cy="14" r="2" fill="#38bdf8"/>
+      <!-- Glowing Trackpad -->
+      <polygon points="175,152 225,145 233,155 183,162" fill="#06081e" stroke="#818cf8" stroke-width="1"/>
+
+      <!-- Floating Holographic Tech Cube -->
+      <g transform="translate(15, 88)">
+        <rect x="0" y="0" width="30" height="30" rx="8" fill="#0b0a24" stroke="#38bdf8" stroke-width="1.5" opacity="0.9" filter="url(#softGlow)"/>
+        <circle cx="15" cy="15" r="6" fill="none" stroke="#c084fc" stroke-width="1.8"/>
+        <circle cx="15" cy="15" r="2.5" fill="#38bdf8"/>
       </g>
     </g>
   </g>
