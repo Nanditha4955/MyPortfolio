@@ -21,3 +21,5 @@
 - **Description**: Created comprehensive documentation covering overview, features, tech stack, project structure, setup, and deployment.
 - **Files Created/Changed**: `vite.config.js`, `src/App.jsx`, `.github/workflows/static.yml`
 - **Description**: Configured dynamic base routing and automated GitHub Pages workflow to support deployment on both GitHub Pages and Vercel.
+- **Files Created/Changed**: `vercel.json`, `README.md`
+- **Description**: Added explicit Vercel SPA build/routing configuration and updated documentation with live deployment links.

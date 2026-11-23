@@ -6,7 +6,8 @@ A sleek, responsive, and performance-focused personal portfolio website built wi
 
 ## 🚀 Live Demo
 
-- **Website:** [Nanditha M Portfolio](https://github.com/Nanditha4955/MyPortfolio) *(Deployed on Vercel)*
+- **Live Website (GitHub Pages):** [https://nanditha4955.github.io/MyPortfolio/](https://nanditha4955.github.io/MyPortfolio/)
+- **Deploy to Vercel:** [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nanditha4955/MyPortfolio)
 - **Featured Live Project:** [Expense Tracker](https://expense-tracker-one-beta-44.vercel.app)
 
 ---
